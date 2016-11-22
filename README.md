@@ -1,18 +1,18 @@
 # Overview
-This project automates the development of Vagrant boxes I use for software development.  
-This project focuses on creating a bare bones Ubuntu 16.04 server box.  The expectation
-is that the output of this project gets fed into another Packer project that enhances
-the box with additional software, such as Docker or MongoDB.
+This project automates the creation of Vagrant boxes I use for software development.  
+This project focuses on creating a bare bones Red Hat Enterprise Linux 7 server box.
+The expectation is that the output of this project gets fed into another Packer project
+that enhances the box with additional software, such as Docker or MongoDB.
 
 # Prerequisites
 * a working [Packer](https://www.packer.io/) installation
 * a working [Vagrant](https://www.vagrantup.com/) installation
 
 ## Custom VirtualBox Appliance
-Currently, the process relies upon a VirtualBox applicance which was created by hand and is not
-currently part of this project.  I did this because I wanted to use the virtualization aware kernel
-and couldn't figure out how to do that in an automated fashion.  For this to work,
-you must have `Xenial-x64-Server.ova` in the root directory.
+Currently, the process relies upon a VirtualBox appliance which was created by hand and is not
+currently part of this project.  I did this because I needed to register the VM with my
+Red Hat Developers account.  You will need to do the same using your own account.
+For this to work, you must have `Maipo-x64-Server.ova` in the root directory.
 
 # Building
 Type `./build.sh` to build the server box.

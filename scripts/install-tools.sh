@@ -1,5 +1,4 @@
 #!/bin/bash
 
-export DEBIAN_FRONTEND="noninteractive"
-until sudo apt update; do echo "Waiting for apt-get lock"; sleep 5; done
-apt install -y build-essential dkms linux-headers-$(uname -r) ssh acpid python-setuptools python-dev git
+until sudo yum -y update; do echo "Waiting for yum lock"; sleep 5; done
+yum -y install kernel-devel openssh acpid python-setuptools git bzip2 gcc

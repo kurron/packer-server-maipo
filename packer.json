@@ -1,14 +1,14 @@
 {
-    "description": "Builds a bare bones, Ubuntu 16.04 Server x64 box",
+    "description": "Builds a bare bones, Red Hat Enterprise Linux 7 Server x64 box",
     "min_packer_version": "0.12.0",
 
     "variables": {
         "ssh_name": "vagrant",
         "ssh_pass": "vagrant",
-        "hostname": "xenial-server-bare",
+        "hostname": "maipo-server-bare",
         "version": "5.1.7",
         "comment": "Upgrade to VirtualBox 5.1.8",
-        "ovf": "Xenial-x64-Server.ova"
+        "ovf": "Maipo-x64-Server.ova"
     },
 
     "builders": [{
@@ -39,7 +39,7 @@
 		        ["modifyvm", "{{.Name}}", "--clipboard", "bidirectional"]
 	      ],
 	"vboxmanage_post": [],
-	"vm_name": "xenial-server-bare"
+	"vm_name": "maipo-server-bare"
     }],
     "provisioners": [
         {
@@ -58,12 +58,12 @@
              "compression_level": 9,
              "include": [],
              "keep_input_artifact": true,
-             "output": "vagrant-bare/xenial-server-bare.box",
+             "output": "vagrant-bare/maipo-server-bare.box",
              "type": "vagrant"
         },
         {
             "type": "atlas",
-            "artifact": "kurron/xenial-server-bare",
+            "artifact": "kurron/maipo-server-bare",
             "artifact_type": "vagrant.box",
             "metadata": {
                 "provider": "virtualbox",
