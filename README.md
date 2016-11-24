@@ -1,8 +1,6 @@
 # Overview
-This project automates the creation of Vagrant boxes I use for software development.  
-This project focuses on creating a bare bones Red Hat Enterprise Linux 7 server box.
-The expectation is that the output of this project gets fed into another Packer project
-that enhances the box with additional software, such as Docker or MongoDB.
+This project enchances the Red Hat Enterprise Linux 7 box created in the master branch by installing
+Docker and its companion tool set.
 
 # Prerequisites
 * a working [Packer](https://www.packer.io/) installation
@@ -27,12 +25,12 @@ and publish them to Hashicorp's Atlas.
 `vagrant up` will launch the server VM.
 Once you are statisfied that the box built correctly, use `vagrant destroy` to remove it.
 
-## Enhanced Versions
-Enhancements to this box live in Git branches.  Explore the other branches of
-this project to see what might be of interest to you, such as a Docker server
-or a box with the Hashistack installed.
-
 # Troubleshooting
+
+## Existing Bare Bones Box Requirement
+Packer [currently does not support importing an existing Vagrant box](https://github.com/mitchellh/packer/issues/869) and enhancing it.
+The workaround is to reference the previously imported OVA from VirtualBox itself.  The `ovf` variable in the `packer.json` illustrates
+how ugly the location is.  You might have to adjust that path to match the exact version you have on your disk currently.
 
 # License and Credits
 This project is licensed under the [Apache License Version 2.0, January 2004](http://www.apache.org/licenses/).
