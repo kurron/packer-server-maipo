@@ -3,5 +3,4 @@
   gather_facts: yes
 
   roles:
-      - { role: kurron.docker-host }
-      
+      - { role: kurron.docker-host, docker_engine_storage_driver: overlay }
