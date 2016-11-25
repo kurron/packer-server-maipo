@@ -1,4 +1,5 @@
 vagrant-bare
+vagrant-docker
 packer_cache
 output-virtualbox-iso
 vagrant
