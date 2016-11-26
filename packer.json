@@ -61,17 +61,6 @@
              "keep_input_artifact": true,
              "output": "vagrant-bare/maipo-server-bare.box",
              "type": "vagrant"
-        },
-        {
-            "type": "atlas",
-            "artifact": "kurron/maipo-server-bare",
-            "artifact_type": "vagrant.box",
-            "metadata": {
-                "provider": "virtualbox",
-                "version": "{{user `version`}}",
-                "description": "{{user `comment`}}",
-                "created_at": "{{timestamp}}"
-              }
-          }]
+        }]
     ]
 }
