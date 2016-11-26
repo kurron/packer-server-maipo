@@ -5,5 +5,5 @@ export PACKER_LOG=activate
 
 packer validate packer.json
 packer build --force packer.json
-vagrant box add --clean --force --name maipo-server-docker/5.1.8 vagrant-docker/maipo-server-docker.box
+vagrant box add --clean --force --name maipo-server-docker vagrant-docker/maipo-server-docker.box
 vagrant box list

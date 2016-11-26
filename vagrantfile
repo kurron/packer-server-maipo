@@ -26,7 +26,7 @@ Vagrant.configure(2) do |config|
           v.gui = true
           v.name = "packer.maipo-docker"
       end
-      server.vm.box = "maipo-server-docker/5.1.8"
+      server.vm.box = "maipo-server-docker"
   end
 
 end

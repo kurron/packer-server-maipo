@@ -9,7 +9,7 @@ Docker and its companion tool set.
 ## Existing Bare Bones Box Requirement
 Packer [currently does not support importing an existing Vagrant box](https://github.com/mitchellh/packer/issues/869) and enhancing it.
 The workaround is to reference the previously imported OVA from VirtualBox itself.  The `ovf` variable in the `packer.json` illustrates
-how ugly the location is.  You might have to adjust that path to match the exact version you have on your disk currently.
+how ugly the location is.  In short, you must have previously built the box in the master branch **before** building this one.
 
 # Building
 Type `./build.sh` to build the server box.
