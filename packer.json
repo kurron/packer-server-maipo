@@ -1,13 +1,13 @@
 {
     "description": "Builds a Red Hat Enterprise Linux 7 Server with Docker installed",
-    "min_packer_version": "0.12.0",
+    "min_packer_version": "0.12.1",
 
     "variables": {
         "ssh_name": "vagrant",
         "ssh_pass": "vagrant",
         "hostname": "maipo-server-docker",
-        "version": "5.1.10",
-        "comment": "Docker 1.12.3, upgrade to VirtualBox 5.1.10",
+        "version": "5.1.12",
+        "comment": "Upgrade to VirtualBox 5.1.12",
         "home": "{{env `HOME`}}"
     },
 
