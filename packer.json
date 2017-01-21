@@ -1,13 +1,13 @@
 {
     "description": "Builds a bare bones, Red Hat Enterprise Linux 7 Server x64 box",
-    "min_packer_version": "0.12.1",
+    "min_packer_version": "0.12.2",
 
     "variables": {
         "ssh_name": "vagrant",
         "ssh_pass": "vagrant",
         "hostname": "maipo-server-bare",
-        "version": "5.1.12",
-        "comment": "Upgrade to VirtualBox 5.1.12",
+        "version": "5.1.14",
+        "comment": "Upgrade to VirtualBox 5.1.14",
         "ovf": "Maipo-x64-Server.ova"
     },
 
